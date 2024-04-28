@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Display with Pagination</title>
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <h1>Employee management system</h1>
+    <div class="filter">
+        <div>
+        <label for="salaryFilter">Salary Filter:</label>
+        <select id="salaryFilter">
+            <option value="lowToHigh">Low to High</option>
+            <option value="highToLow">High to Low</option>
+        </select>
+        </div>
+       <div>
+        <label for="departmentFilter">Department Filter:</label>
+        <select id="departmentFilter">
+            <option value="all">All Departments</option>
+            <option value="marketing">Marketing</option>
+            <option value="operations">operating</option>
+            <option value="engineering">Engineering</option>
+            <option value="hr">Hr</option>
+        </select>
+       </div>
+
+        <div>
+            <label for="genderFilter">Gender Filter:</label>
+        <select id="genderFilter">
+            <option value="all">All Genders</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">others</option>
+        </select>
+        </div>
+    </div>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Department</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button id="prevPage">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage">Next</button>
+    </div>
+
+   <script src="./src/index.js"></script>
+</body>
+</html>
